@@ -1,5 +1,20 @@
 # cloudinv-agent
 
+## Initial Setup
+This can likely be done in any VirtualBox host, but in macOS/Sierra (10.12)
+  * install latest VirtualBox
+  * Create a 2016 Server VM within VirtualBox
+
+In the Server 2016 VM:
+  * Install latest Docker
+  * Pull down Windows server core from docker:  
+  `docker pull microsoft/windowsservercore` (this should be vanilla Server 2016 with .Net 4.5)
+ 
+Note: looks like MSI requires WindowsServerCore, and can't be done with NanoServer. 
+ref. https://blog.sixeyed.com/how-to-dockerize-windows-applications/ 
+
+## Example docker build command
+
 Ex. docker build usage, where Dockerfile is at C:\build\Dockerfile
 
 `docker build -t cloudinv-agent C:\build --build-arg AGENT_VERSION=<current Agent version ex. 0.3.16> --build-arg SITE_KEY="<actualSiteKey>"`
