@@ -3,7 +3,7 @@
 Use docker to build a container that installs and runs the Spiceworks Agent Shell "Cloud Inventory" module. This agent module checks in with the Spiceworks Cloud Inventory service to create a new sample/test device record in the inventory list.
 
 ## Initial Setup
-This can likely be done in any VirtualBox host, but in macOS/Sierra (10.12)
+This can likely be done in any VirtualBox host. In macOS/Sierra (10.12):
   * install latest VirtualBox
   * Create a 2016 Server VM within VirtualBox
 
